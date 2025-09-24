@@ -1,0 +1,42 @@
+spring:
+  jpa:
+    generate-ddl: 'false'
+    properties:
+      hibernate:
+        use_sql_comments: 'true'
+        format_sql: 'true'
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: 'true'
+    open-in-view: 'false'
+  thymeleaf:
+    cache: 'false'
+    prefix: classpath:/templates/
+    check-template-location: 'true'
+    suffix: .html
+  datasource:
+    password: '1234'
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: poly
+    url: jdbc:mariadb://192.168.40.131:3306/myDB
+
+server:
+  port: '13000'
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    beans:
+      enabled: true
+    info:
+      enabled: true
+  server:
+    address: localhost
+    port: 13001
