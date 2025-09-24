@@ -1,3 +1,5 @@
+poly: "hello from notice-prod"
+
 spring:
   jpa:
     generate-ddl: 'false'
@@ -39,4 +41,5 @@ management:
       enabled: true
   server:
     address: localhost
+
     port: 13001
