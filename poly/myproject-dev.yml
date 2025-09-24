@@ -1,0 +1,21 @@
+server:
+  port: 12100
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    beans:
+      enabled: true
+    info:
+      enabled: true
+  server:
+    address: localhost
+    port: 12101
+
+poly: 'BigData Dev!'
